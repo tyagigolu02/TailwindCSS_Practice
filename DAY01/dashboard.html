@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'black-dark': '#1a1a1a',
+                        'white-light': 'rgba(255, 255, 255, 0.1)',
+                        'white-medium': 'rgba(255, 255, 255, 0.8)',
+                        'dull-white': 'rgba(255, 255, 255, 0.7)',
+                        'neon-blue': '#00d9ff',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gradient-to-r from-[#F28383] from-10% via-[#906CD2] via-30% to-[#481EDC] to-90% min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-black-dark bg-opacity-90 backdrop-blur-md shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-white">Dashboard</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-dull-white" id="userGreeting">Welcome back!</span>
+                    <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full transition-all duration-300">
+                        <i class="fa-solid fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Welcome Card -->
+        <div class="bg-black-dark bg-opacity-90 backdrop-blur-md rounded-2xl shadow-2xl p-8 mb-8 fade-in">
+            <div class="text-center text-white">
+                <div class="mb-6">
+                    <i class="fa-solid fa-user-circle text-6xl text-neon-blue"></i>
+                </div>
+                <h2 class="text-3xl font-bold mb-4" id="welcomeTitle">Welcome to Your Dashboard!</h2>
+                <p class="text-dull-white text-lg mb-6">You now have access to 300+ hours of premium content.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white-light p-6 rounded-xl">
+                        <i class="fa-solid fa-play text-3xl text-neon-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Video Courses</h3>
+                        <p class="text-dull-white">Access 200+ video tutorials</p>
+                    </div>
+                    <div class="bg-white-light p-6 rounded-xl">
+                        <i class="fa-solid fa-book text-3xl text-neon-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Documentation</h3>
+                        <p class="text-dull-white">Comprehensive guides and docs</p>
+                    </div>
+                    <div class="bg-white-light p-6 rounded-xl">
+                        <i class="fa-solid fa-users text-3xl text-neon-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Community</h3>
+                        <p class="text-dull-white">Connect with other learners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-black-dark bg-opacity-90 backdrop-blur-md rounded-2xl shadow-2xl p-8 mb-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-6">Recent Activity</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-4 bg-white-light rounded-xl">
+                    <div class="flex items-center space-x-4">
+                        <i class="fa-solid fa-video text-neon-blue text-xl"></i>
+                        <div>
+                            <h4 class="text-white font-semibold">Getting Started with Tailwind CSS</h4>
+                            <p class="text-dull-white text-sm">Completed 2 hours ago</p>
+                        </div>
+                    </div>
+                    <span class="text-green-400 font-semibold">100%</span>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white-light rounded-xl">
+                    <div class="flex items-center space-x-4">
+                        <i class="fa-solid fa-code text-neon-blue text-xl"></i>
+                        <div>
+                            <h4 class="text-white font-semibold">Advanced CSS Grid Layouts</h4>
+                            <p class="text-dull-white text-sm">In progress</p>
+                        </div>
+                    </div>
+                    <span class="text-yellow-400 font-semibold">65%</span>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white-light rounded-xl">
+                    <div class="flex items-center space-x-4">
+                        <i class="fa-solid fa-mobile-alt text-neon-blue text-xl"></i>
+                        <div>
+                            <h4 class="text-white font-semibold">Responsive Design Principles</h4>
+                            <p class="text-dull-white text-sm">Starting soon</p>
+                        </div>
+                    </div>
+                    <span class="text-gray-400 font-semibold">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-black-dark bg-opacity-90 backdrop-blur-md rounded-2xl shadow-2xl p-8 fade-in">
+            <h3 class="text-2xl font-bold text-white mb-6">Quick Actions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <button class="bg-gradient-to-r from-neon-blue to-blue-500 text-white p-4 rounded-xl hover:from-blue-500 hover:to-neon-blue transform hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-play text-2xl mb-2"></i>
+                    <p class="font-semibold">Continue Learning</p>
+                </button>
+                <button class="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-search text-2xl mb-2"></i>
+                    <p class="font-semibold">Browse Courses</p>
+                </button>
+                <button class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 rounded-xl hover:from-purple-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-user text-2xl mb-2"></i>
+                    <p class="font-semibold">Edit Profile</p>
+                </button>
+                <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 rounded-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300">
+                    <i class="fa-solid fa-cog text-2xl mb-2"></i>
+                    <p class="font-semibold">Settings</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        function checkAuth() {
+            const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+            if (!userData.email) {
+                window.location.href = '01.html';
+                return;
+            }
+            
+            // Update UI with user data
+            document.getElementById('userGreeting').textContent = `Welcome, ${userData.fullName}!`;
+            document.getElementById('welcomeTitle').textContent = `Welcome back, ${userData.fullName}!`;
+        }
+
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                localStorage.removeItem('userData');
+                localStorage.removeItem('passwordReset');
+                window.location.href = '01.html';
+            }
+        }
+
+        // Check authentication on page load
+        window.addEventListener('load', checkAuth);
+    </script>
+</body>
+</html>

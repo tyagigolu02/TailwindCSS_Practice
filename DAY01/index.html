@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS Login System - Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'glass-white': 'rgba(255, 255, 255, 0.25)',
+                        'glass-border': 'rgba(255, 255, 255, 0.18)',
+                        'text-primary': '#2d3748',
+                        'text-secondary': '#4a5568',
+                        'accent-blue': '#4299e1',
+                        'accent-purple': '#9f7aea',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 min-h-screen p-4">
+    <div class="max-w-6xl mx-auto py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6">
+                <i class="fa-solid fa-shield-alt text-white text-3xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Modern Login System</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Complete authentication system built with Tailwind CSS featuring clean design and smooth user experience</p>
+        </div>
+
+        <!-- Navigation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- Login Page -->
+            <a href="01.html" class="block bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+                        <i class="fa-solid fa-sign-in-alt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign In</h3>
+                    <p class="text-gray-600 text-sm">Main login form with email and password authentication</p>
+                </div>
+            </a>
+
+            <!-- Sign Up Page -->
+            <a href="signup.html" class="block bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+                        <i class="fa-solid fa-user-plus text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up</h3>
+                    <p class="text-gray-600 text-sm">Create new account with form validation</p>
+                </div>
+            </a>
+
+            <!-- Forgot Password -->
+            <a href="forgot-password.html" class="block bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
+                        <i class="fa-solid fa-key text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Reset Password</h3>
+                    <p class="text-gray-600 text-sm">Reset password via email verification</p>
+                </div>
+            </a>
+
+            <!-- Set Password -->
+            <a href="set-password.html" class="block bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-full mb-4">
+                        <i class="fa-solid fa-lock text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Set Password</h3>
+                    <p class="text-gray-600 text-sm">Create secure password with requirements</p>
+                </div>
+            </a>
+
+            <!-- Dashboard -->
+            <a href="dashboard.html" class="block bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:bg-white/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-full mb-4">
+                        <i class="fa-solid fa-tachometer-alt text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Dashboard</h3>
+                    <p class="text-gray-600 text-sm">User dashboard after successful login</p>
+                </div>
+            </a>
+
+            <!-- Demo Account -->
+            <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl p-6 shadow-lg">
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mb-4">
+                        <i class="fa-solid fa-user text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Demo Account</h3>
+                    <p class="text-blue-100 text-sm mb-4">Test the system with this account</p>
+                    <div class="bg-white/20 rounded-lg p-3 text-left text-sm space-y-1">
+                        <p><strong>Email:</strong> demo@example.com</p>
+                        <p><strong>Password:</strong> Demo123!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🚀 Features Included</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Responsive Design</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Form Validation</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Password Strength</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Data Persistence</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Modal Notifications</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fa-solid fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700">Smooth Animations</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8">
+            <p class="text-gray-600">Built with ❤️ using Tailwind CSS</p>
+        </div>
+    </div>
+
+    <script>
+        // Create demo account
+        const demoAccount = {
+            fullName: 'Demo User',
+            email: 'demo@example.com',
+            password: 'Demo123!',
+            createdAt: new Date().toISOString()
+        };
+        
+        // Only create demo account if no user data exists
+        if (!localStorage.getItem('userData')) {
+            localStorage.setItem('userData', JSON.stringify(demoAccount));
+        }
+    </script>
+</body>
+</html>
